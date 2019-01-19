@@ -1,0 +1,37 @@
+apiVersion: federation.knative.dev/v1alpha1
+kind: FederatedService
+metadata:
+  name: f9ab9edad-1449-4466-a0f1-2e5de6341ed3
+  namespace: 285c5af8-3a7f-4a1a-bccd-4cfb0ffe2c82
+spec:
+  template:
+    metadata:
+      name: f9ab9edad-1449-4466-a0f1-2e5de6341ed3
+    spec:
+      runLatest:
+        configuration:
+          revisionTemplate:
+            spec:
+              container:
+                image: gcr.io/dynamic-now-218617/285c5af8-3a7f-4a1a-bccd-4cfb0ffe2c82:f9ab9edad-1449-4466-a0f1-2e5de6341ed3
+                env:
+                - name: AWS_KEY_ID
+                  value: ""
+                - name: AWS_ACCESS_KEY
+                  value: ""
+                - name: TWILIO_SID
+                  value: ""
+                - name: TWILIO_TOKEN
+                  value: ""
+
+---
+apiVersion: federation.knative.dev/v1alpha1
+kind: FederatedServicePlacement
+metadata:
+  name: f9ab9edad-1449-4466-a0f1-2e5de6341ed3
+  namespace: 285c5af8-3a7f-4a1a-bccd-4cfb0ffe2c82
+spec:
+   clusterNames:
+   - cluster2
+   - cluster1
+   - cluster33
