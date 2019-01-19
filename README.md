@@ -5,7 +5,6 @@ Twilio setup:
 
 ![twilio setup](https://github.com/ffahri/serverlessrecognizedogs/raw/master/pictures/1.png "Twilio setup")
 
-
 Recognized and sends:
 
 ![photos coming if they're dogs](https://github.com/ffahri/serverlessrecognizedogs/raw/master/pictures/2.png "Whatsapp part")
